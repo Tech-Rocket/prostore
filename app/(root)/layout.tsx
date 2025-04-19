@@ -1,9 +1,4 @@
-// import type { Metadata } from "next";
-
-// export const metadata: Metadata = {
-//   title: "Prostore",
-//   description: "A modern e-commerce platform",
-// };
+import Header from "@/components/shared/header/header";
 
 export default function RootLayout({
   children,
@@ -12,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
         <div className="flex h-screen flex-col">
-            ROOT
+            <Header/>
             <main className="flex-1 wrapper">
             {children}
             </main>

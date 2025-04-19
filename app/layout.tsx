@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { APP_NAME } from "@/lib/constants/index";
+import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from "@/lib/constants/index";
 
 
 const inter = Inter({
@@ -10,8 +10,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 
-  title: `${APP_NAME}`,
-  description: "A modern e-commerce platform",
+  title: {
+    template: "%s | Prostore",
+    default: APP_NAME
+  },
+  description: APP_DESCRIPTION,
+  metadataBase: new URL(SERVER_URL)
 };
 
 export default function RootLayout({

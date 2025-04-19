@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { APP_NAME } from "@/lib/constants/index";
 
 
 const inter = Inter({
@@ -9,7 +9,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Prostore",
+
+  title: `${APP_NAME}`,
   description: "A modern e-commerce platform",
 };
 

@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Bold } from "lucide-react";
+import ProductPrice from "./product-price";
 
 export default function ProductCard(props: { product: any }) {
   return (
@@ -35,7 +35,12 @@ export default function ProductCard(props: { product: any }) {
         <div className="flex-bewteen gap-4">
           <p>{props.product.rating} Stars</p>
           {props.product.stock > 0 ? (
-            <p className="font-bold">{props.product.price}</p>
+            <p className="font-medium">
+              <ProductPrice
+                value={Number(props.product.price)}
+                className="text-green-600"
+              />
+            </p>
           ) : (
             <p className="text-destructive">Out of Stock</p>
           )}

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import loader from "@/public/assets/loader.gif";
 
-
 export default function LoadingPage() {
   return (
     <div

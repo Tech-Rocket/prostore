@@ -5,7 +5,9 @@ export default async function HomePage() {
   const latestProducts = await getLatestProducts();
   return (
     <>
-      <ProductList data={latestProducts} title="Newest Arrival" limit={4} />
+      <div className="mb-8">
+        <ProductList data={latestProducts} title="Newest Arrival" limit={4} />
+      </div>
     </>
   );
 }

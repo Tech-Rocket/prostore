@@ -6,14 +6,15 @@ import ProductPrice from "./product-price";
 export default function ProductCard(props: { product: any }) {
   return (
     <Card className="w-full max-w-sm">
-      <CardHeader className="p-0 items-center">
+      <CardHeader className="p-0 flex items-center justify-center">
         <Link href={`/product/${props.product.slug}`}>
           <Image
             src={props.product.images[0]}
             alt={props.product.name}
-            height={300}
-            width={300}
+            height={220}
+            width={220}
             priority={true}
+            className="rounded-md"
           />
         </Link>
       </CardHeader>

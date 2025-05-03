@@ -12,7 +12,7 @@ export default function LoadingPage() {
         width: "100vw",
       }}
     >
-      <Image src={loader} alt="loading..." height={150} width={150} />
+      <Image src={loader} alt="loading..." height={100} width={100} />
     </div>
   );
 }

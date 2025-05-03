@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import ProductPrice from "./product-price";
+import { ProductTypes } from "@/types";
 
-export default function ProductCard(props: { product: any }) {
+export default function ProductCard(props: { product: ProductTypes }) {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader className="p-0 flex items-center justify-center">
@@ -29,12 +30,12 @@ export default function ProductCard(props: { product: any }) {
         <div className="flex-bewteen gap-4">
           <p>{props.product.rating} Stars</p>
           {props.product.stock > 0 ? (
-            <p className="font-medium">
+            <div className="font-medium">
               <ProductPrice
                 value={Number(props.product.price)}
                 className="text-green-600"
               />
-            </p>
+            </div>
           ) : (
             <p className="text-destructive">Out of Stock</p>
           )}
